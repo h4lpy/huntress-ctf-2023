@@ -2,7 +2,7 @@
 
 ## F12
 
-*Remember when Missouri got into hacking!?! You gotta be _fast_ to catch this flag!*
+Remember when Missouri got into hacking!?! You gotta be _fast_ to catch this flag!
 
 ### Walkthrough
 
