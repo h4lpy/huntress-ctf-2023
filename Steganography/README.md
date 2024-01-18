@@ -4,6 +4,10 @@
 
 This trick is nothing new, you know what to do: **iSteg**. Look for the tail that's older than time, this Spike, you shouldn't climb.
 
+File: [challenges_files/dinosaurs1.png]
+
+![dinosaurs1.png](challenge_files/dinosaurs1.png)
+
 ### Walkthrough
 
 Given the hint, we can use the [iSteg tool](https://github.com/rafiibrahim8/iSteg/releases/download/v2.1/iSteg-v2.1_GUI.jar) to reveal the flag:
