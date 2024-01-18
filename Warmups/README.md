@@ -213,6 +213,18 @@ File: [dialtone.wav](challenge_files/dialtone.wav)
 
 ### Walkthrough
 
+We are provided a `.wav` file comprising sounds of key presses which can be decoded through a [DTMF Decoder](https://github.com/ribt/dtmf-decoder):
+
+```
+13040004482820197714705083053746380382743933853520408575731743622366387462228661894777288573
+```
+
+The output is a long hexadecimal string which can be decoded to obtain the flag:
+
+```
+flag{6c733ef09bc4f2a4313ff63087e25d67}
+```
+
 ## Read The Rules
 
 *Please follow the rules for this CTF!*
