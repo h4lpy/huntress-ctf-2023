@@ -22,7 +22,7 @@ flag{03e8ba07d1584c17e69ac95c341a2569}
 
 ## Technical Support
 
-*Want to join the party of GIFs, memes and emoji shenanigans? Or just want to ask a question for technical support regarding any challenges in the CTF?  *
+Want to join the party of GIFs, memes and emoji shenanigans? Or just want to ask a question for technical support regarding any challenges in the CTF?
   
 **This CTF uses support tickets to help handle requests. If you need assistance, please create a ticket with the `#ctf-open-ticket` channel. You do not need to direct message any CTF organizers or facilitators, they will just tell you to open a ticket. You might find a flag in the ticket channel, though!**
 
@@ -41,7 +41,7 @@ flag{a98373a74abb8c5ebb8f5192e034a91c}
 
 ## String Cheese
 
-*Oh, a cheese stick! This was my favorite snack as a kid. My mom always called it by a different name though...*
+Oh, a cheese stick! This was my favorite snack as a kid. My mom always called it by a different name though...
 
 File: [cheese.jpg](challenge_files/cheese.jpg)
 
@@ -58,7 +58,7 @@ flag{f4d9f0f70bf353f2ca23d81dcf7c9099}
 
 ## Notepad
 
-*Just a sanity check... you do know how to use a computer, right?*
+Just a sanity check... you do know how to use a computer, right?
 
 File: [notepad](challenge_files/notepad)
 
@@ -95,24 +95,47 @@ $ cat notepad
 
 ## Layered Security
 
-*It takes a team to do security right, so we have layered our defenses!*
+It takes a team to do security right, so we have layered our defenses!
 
 File: [layered_security](challenge_files/layered_security)
 
 ### Walkthrough
 
+Running `file`, we see this is a GIMP XCF image:
 
+![Layered Security - File Info](/images/ls_file_info.png)
+
+Opening this file in Gimp shows a multitude of portrait images. The flag is hidden within one of the layered images:
+
+![Layered Security - Layered Flag](/images/ls_layered_flag.png)
+
+```
+flag{9a64bc4a390cb0ce31452820ee562c3f}
+```
 
 ## Comprezz
 
-*Someone stole my S's and replaced them with Z's! Have you ever seen this kind of file before?*
+Someone stole my S's and replaced them with Z's! Have you ever seen this kind of file before?
 
 File: [comprezz](challenge_files/comprezz)
 ### Walkthrough
 
+Running `file`, we see that it is `compress'd data 16 bits`. After some research, we find that this is a `.z` file missing an extension (ref: [LinuxForDevices - Uncompress Z File](https://www.linuxfordevices.com/tutorials/linux/uncompress-z-file)).
+
+Simply adding the extension with `mv` and running `uncompress` returns the flag:
+
+```console
+$ mv comprezz comprezz.z
+$ uncompress comprezz.z
+```
+
+```
+flag{196a71490b7b55c42bf443274f9ff42b}
+```
+
 ## Chicken Wings
 
-*I ordered chicken wings at the local restaurant, but uh... this really isn't what I was expecting...*
+I ordered chicken wings at the local restaurant, but uh... this really isn't what I was expecting...
 
 File: [chicken_wings](challenge_files/chicken_wing)
 
@@ -135,22 +158,46 @@ flag{e0791ce68f718188c0378b1c0a3bdc9e}
 
 ## CaesarMirror
 
-*Caesar caesar, on the wall, who is the fairest of them all?*  
+Caesar caesar, on the wall, who is the fairest of them all?  
   
-*Perhaps a clever ROT13?*
+Perhaps a clever ROT13?
 
 File: [caesarmirror.txt](challenge_files/caesarmirror.txt)
 
 ### Walkthrough
 
+Reading the provided `.txt` file, we see its content is encoded with the Caesar cipher, specifically ROT13:
+
+![caesarmirror - ROT 13](/images/caesarmirror_rot13.png)
+
+From the decoded output, the right-side is reversed.
+
+We can piece together parts of the flag:
+
+![caesarmirror - Flag Parts](/images/caesarmirror_flag_parts.png)
+
+```
+flag{julius_in_a_reflection}
+```
+
 ## Book By Its Cover
 
-*They say you aren't supposed to judge a book by its cover, but this is one of my favorites!*
+They say you aren't supposed to judge a book by its cover, but this is one of my favorites!
 
 File: [book.rar](challenge_files/book.rar)
+
+### Walkthrough
+
+Opening the extracted `book.png` file reveals the flag:
+
+![Book By Its Cover - Flag](/images/bbic_flag.png)
+
+```
+flag{f8d32a346745a6c4bf4e9504ba5308f0}
+```
 ## BaseFFFF+1
 
-*Maybe you already know about Base64, but what if we took it up a notch*?
+Maybe you already know about Base64, but what if we took it up a notch?
 
 File: [baseffff1](challenge_files/baseffff1)
 
@@ -177,7 +224,7 @@ flag{716abce880f09b7cdc7938eddf273648}
 
 ## Baking
 
-*Do you know how to make cookies? How about HTTP flavored?*
+Do you know how to make cookies? How about HTTP flavored?
 
 ### Walkthrough
 
@@ -207,7 +254,7 @@ flag{c36fb6ebdbc2c44e6198bf4154d94ed4}
 
 ## Dialtone
 
-*Well would you listen to those notes, that must be some long phone number or something!*
+Well would you listen to those notes, that must be some long phone number or something!
 
 File: [dialtone.wav](challenge_files/dialtone.wav)
 
@@ -219,7 +266,7 @@ We are provided a `.wav` file comprising sounds of key presses which can be deco
 13040004482820197714705083053746380382743933853520408575731743622366387462228661894777288573
 ```
 
-The output is a long hexadecimal string which can be decoded to obtain the flag:
+The output is a long hexadecimal string which can be [decoded to obtain the flag](https://gchq.github.io/CyberChef/#recipe=To_Base(16)From_Hex('Auto')&input=MTMwNDAwMDQ0ODI4MjAxOTc3MTQ3MDUwODMwNTM3NDYzODAzODI3NDM5MzM4NTM1MjA0MDg1NzU3MzE3NDM2MjIzNjYzODc0NjIyMjg2NjE4OTQ3NzcyODg1NzM):
 
 ```
 flag{6c733ef09bc4f2a4313ff63087e25d67}
@@ -227,10 +274,7 @@ flag{6c733ef09bc4f2a4313ff63087e25d67}
 
 ## Read The Rules
 
-*Please follow the rules for this CTF!*
-
-**Connect here:**  
-[Read The Rules](https://huntress.ctf.games/rules)
+Please follow the rules for this CTF!
 
 ### Walkthrough
 
@@ -245,7 +289,7 @@ Looking at the page's source code shows a HTML comment with the flag embedded:
 
 ## Query Code
 
-*What's this?*
+What's this?
 
 File: [query_code](challenge_files/query_code)
 
