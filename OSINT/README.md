@@ -2,9 +2,9 @@
 
 ## Under The Bridge
 
-*Can you find this iconic location?*
+Can you find this iconic location?
 
-*Connect here:* [https://osint.golf/HuntressCTF2023-chall2/](https://osint.golf/HuntressCTF2023-chall2)
+Connect here: [https://osint.golf/HuntressCTF2023-chall2/](https://osint.golf/HuntressCTF2023-chall2)
 ### Walkthrough
 
 From the initial location, we confirm this is in the United Kingdom based on the license plates and street signs:
@@ -21,9 +21,9 @@ flag{fdc8cd4cff2c19e0d1022e78481ddf36}
 
 ## Operation Not Found
 
-*In the boundless web of data, some corners echo louder than others, whispering tales of innovation, deep knowledge, and fierce competition. On the lush landscapes of [https://osint.golf/](https://osint.golf/), a corner awaits your discovery... where intellect converges with spirit, and where digital foundations stand alongside storied arenas.*
+In the boundless web of data, some corners echo louder than others, whispering tales of innovation, deep knowledge, and fierce competition. On the lush landscapes of [https://osint.golf/](https://osint.golf/), a corner awaits your discovery... where intellect converges with spirit, and where digital foundations stand alongside storied arenas.
 
-*Connect here:* [https://osint.golf/HuntressCTF2023-chall1/](https://osint.golf/HuntressCTF2023-chall1)
+Connect here: [https://osint.golf/HuntressCTF2023-chall1/](https://osint.golf/HuntressCTF2023-chall1)
 
 ### Walkthrough
 
@@ -37,7 +37,7 @@ flag{c46b7183c981ec4cddb31b2fdc6a914c}
 
 ## Where am I?
 
-*Your friend thought using a JPG was a great way to remember how to login to their private server. Can you find the flag?*
+Your friend thought using a JPG was a great way to remember how to login to their private server. Can you find the flag?
 
 File: [PXL_20230922_231845140_2.jpg](challenge_files/PXL_20230922_231845140_2.jpg)
 
