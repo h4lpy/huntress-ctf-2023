@@ -25,12 +25,15 @@ $ ./wav2tap pressplayontape.wav | ./c64tapedecode -T -v
 
 This creates a file `' .p00'` which contains the flag:
 
-```
+```console
 $ cat ' .p00'
 C64File                0
 � "FLAG[32564872D760263D52929CE58CC40071]"� 10
 ```
 
+```
+FLAG[32564872D760263D52929CE58CC40071]
+```
 ## Welcome to the Park
 
 *The creator of Jurassic Park is in hiding... amongst Mach-O files, apparently. Can you find him?*
